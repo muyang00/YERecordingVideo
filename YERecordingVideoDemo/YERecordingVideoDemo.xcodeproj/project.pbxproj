@@ -16,6 +16,8 @@
 		B4EC473B1E7BC77500DD5B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EC47391E7BC77500DD5B0B /* LaunchScreen.storyboard */; };
 		B4EC47461E7BC77500DD5B0B /* YERecordingVideoDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EC47451E7BC77500DD5B0B /* YERecordingVideoDemoTests.m */; };
 		B4EC47511E7BC77500DD5B0B /* YERecordingVideoDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EC47501E7BC77500DD5B0B /* YERecordingVideoDemoUITests.m */; };
+		B4EC47611E7BC95400DD5B0B /* YERecordVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EC47601E7BC95400DD5B0B /* YERecordVideoTool.m */; };
+		B4EC47641E7BC98400DD5B0B /* YERecordProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EC47631E7BC98400DD5B0B /* YERecordProcessView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		B4EC474C1E7BC77500DD5B0B /* YERecordingVideoDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YERecordingVideoDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EC47501E7BC77500DD5B0B /* YERecordingVideoDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YERecordingVideoDemoUITests.m; sourceTree = "<group>"; };
 		B4EC47521E7BC77500DD5B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4EC475F1E7BC95400DD5B0B /* YERecordVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YERecordVideoTool.h; sourceTree = "<group>"; };
+		B4EC47601E7BC95400DD5B0B /* YERecordVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YERecordVideoTool.m; sourceTree = "<group>"; };
+		B4EC47621E7BC98400DD5B0B /* YERecordProcessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YERecordProcessView.h; sourceTree = "<group>"; };
+		B4EC47631E7BC98400DD5B0B /* YERecordProcessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YERecordProcessView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		B4EC47271E7BC77500DD5B0B /* YERecordingVideoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B4EC475E1E7BC91800DD5B0B /* RecordTool */,
 				B4EC472B1E7BC77500DD5B0B /* AppDelegate.h */,
 				B4EC472C1E7BC77500DD5B0B /* AppDelegate.m */,
 				B4EC472E1E7BC77500DD5B0B /* ViewController.h */,
@@ -141,6 +148,17 @@
 				B4EC47521E7BC77500DD5B0B /* Info.plist */,
 			);
 			path = YERecordingVideoDemoUITests;
+			sourceTree = "<group>";
+		};
+		B4EC475E1E7BC91800DD5B0B /* RecordTool */ = {
+			isa = PBXGroup;
+			children = (
+				B4EC475F1E7BC95400DD5B0B /* YERecordVideoTool.h */,
+				B4EC47601E7BC95400DD5B0B /* YERecordVideoTool.m */,
+				B4EC47621E7BC98400DD5B0B /* YERecordProcessView.h */,
+				B4EC47631E7BC98400DD5B0B /* YERecordProcessView.m */,
+			);
+			path = RecordTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4EC47361E7BC77500DD5B0B /* YERecordingVideoDemo.xcdatamodeld in Sources */,
+				B4EC47611E7BC95400DD5B0B /* YERecordVideoTool.m in Sources */,
 				B4EC47301E7BC77500DD5B0B /* ViewController.m in Sources */,
 				B4EC472D1E7BC77500DD5B0B /* AppDelegate.m in Sources */,
 				B4EC472A1E7BC77500DD5B0B /* main.m in Sources */,
+				B4EC47641E7BC98400DD5B0B /* YERecordProcessView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YERecordingVideoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YERecordingVideoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YERecordingVideoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YERecordingVideoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,6 +533,7 @@
 				B4EC47571E7BC77500DD5B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4EC47581E7BC77500DD5B0B /* Build configuration list for PBXNativeTarget "YERecordingVideoDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +542,7 @@
 				B4EC475A1E7BC77500DD5B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4EC475B1E7BC77500DD5B0B /* Build configuration list for PBXNativeTarget "YERecordingVideoDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +551,7 @@
 				B4EC475D1E7BC77500DD5B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
