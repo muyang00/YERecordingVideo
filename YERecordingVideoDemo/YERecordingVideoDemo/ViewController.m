@@ -132,6 +132,7 @@
 - (void)cameraButtonClick:(UIButton *)cameraButton{
     cameraButton.selected = !cameraButton.isSelected;
     if (cameraButton.selected) {
+        [self.videoTool closeFlashLight];
         [self.videoTool changeCameraInputDeviceisFront:YES];
     }else{
         [self.videoTool changeCameraInputDeviceisFront:NO];
