@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface YERecordProcessView : NSObject
+#define lineWith 5
+@interface YERecordProcessView : UIView
+
+@property (nonatomic, assign) CGFloat progress;
+- (instancetype)initWithCenter:(CGPoint)center radius:(CGFloat)radius;
 
 @end
